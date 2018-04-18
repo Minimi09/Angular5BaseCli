@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { GitHubCardComponent } from "./git-hub-card/git-hub-card.component";
 import { MatToolbarModule,
         MatSidenavModule,
         MatButtonModule,
@@ -34,7 +35,8 @@ export const MATERIAL_COMPONENTS = [
     AppComponent,
     MainComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    GitHubCardComponent
   ],
   imports: [
     BrowserModule,
