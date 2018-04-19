@@ -1,6 +1,6 @@
 export class GitHubModel{
     login : String;
-    avatarUrl : String;
+    avatarURL : String;
     name : String;
     followers : number;
     following : number;
