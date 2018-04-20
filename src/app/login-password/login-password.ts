@@ -5,8 +5,8 @@ import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-login-password',
-    templateUrl: './component2.html',
-    styleUrls: ['./component2.css']
+    templateUrl: './login-password.html',
+    styleUrls: ['./login-password.css']
 })
 export class LoginPassword implements OnInit, OnDestroy {
    

@@ -23,8 +23,10 @@ import { LoginComponent } from "./login/login.component";
 import {SearchUserComponent} from './search-user/search-user-component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
-import { LoginPassword } from "./component2/component2";
+import { LoginPassword } from "./login-password/login-password";
 import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
+
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -34,7 +36,8 @@ export const MATERIAL_COMPONENTS = [
   MatIconModule,
   MatInputModule,
   MatProgressBarModule,
-  MatSelectModule
+  MatSelectModule,
+  MatCardModule
 ]
 
 @NgModule({
@@ -48,7 +51,7 @@ export const MATERIAL_COMPONENTS = [
     PasivoComponent,
     ReactivoComponent,
     LoginComponent,
-    LoginPassword
+    LoginPassword,
   ],
   imports: [
     BrowserModule,
