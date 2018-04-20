@@ -19,7 +19,11 @@ import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from "./login/login.component";
 import {SearchUserComponent} from './search-user/search-user-component';
+import { PasivoComponent } from './pasivo/pasivo.component';
+import { ReactivoComponent } from './reactivo/reactivo.component';
+import { LoginPassword } from "./component2/component2";
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -38,7 +42,11 @@ export const MATERIAL_COMPONENTS = [
     AboutComponent,
     ContactComponent,
     GitHubCardComponent,
-    SearchUserComponent
+    SearchUserComponent,
+    PasivoComponent,
+    ReactivoComponent,
+    LoginComponent,
+    LoginPassword
   ],
   imports: [
     BrowserModule,
