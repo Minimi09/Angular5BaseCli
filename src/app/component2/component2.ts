@@ -21,11 +21,8 @@ export class LoginPassword implements OnInit, OnDestroy {
 
     loginUser( )
     {
-        var a=this._loginService.checkLogin(this.user,this.password);
-        if (a==true)
-        {
-            this._router.navigate(['']);
-        }
+     
+        this._loginService.checkLogin(this.user,this.password) ? this._router.navigate(['']) : alert('Error User/Password Invalidos');
     }
 
     ngOnDestroy() {

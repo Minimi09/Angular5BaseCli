@@ -9,14 +9,7 @@ export class LoginService {
   
     
     checkLogin(user:string,password:string){
-        
-        var a:boolean;
-
-        if(this.userOne===user && this.passwordOne===password)
-        {
-         return a=true;
-        }
-
+        return (this.userOne===user && this.passwordOne===password)
     }
 
     
