@@ -24,6 +24,7 @@ import {SearchUserComponent} from './search-user/search-user-component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginPassword } from "./component2/component2";
+import {MatSelectModule} from '@angular/material/select';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -32,7 +33,8 @@ export const MATERIAL_COMPONENTS = [
   MatListModule,
   MatIconModule,
   MatInputModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSelectModule
 ]
 
 @NgModule({
