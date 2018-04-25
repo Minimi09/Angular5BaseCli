@@ -3,8 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Rx";
 import { GitHubModel } from "../model/git-hub-model";
 
-//const _userUrl = 'https://api.github.com/users';
-const _userUrl = 'http://10.11.1.100:8080/users';
+const _userUrl = 'https://api.github.com/users';
+//const _userUrl = 'http://10.11.1.100:8080/users';
 
 @Injectable()
 export class GitHubService{

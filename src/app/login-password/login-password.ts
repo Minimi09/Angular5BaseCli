@@ -10,10 +10,10 @@ import {Router} from "@angular/router";
 })
 export class LoginPassword implements OnInit, OnDestroy {
    
-    user: string;
+    user: string= 'Minely';
     password: string;
 
-    constructor(private _loginService:LoginService, private _router:Router) {
+    constructor(private _loginService:LoginService, public _router:Router) {
 
     }
     ngOnInit() {
@@ -21,6 +21,7 @@ export class LoginPassword implements OnInit, OnDestroy {
 
     loginUser( )
     {
+        //operador terciario .
         this._loginService.checkLogin(this.user,this.password) ? this._router.navigate(['']) : alert('Error User/Password Invalidos');
     }
 
