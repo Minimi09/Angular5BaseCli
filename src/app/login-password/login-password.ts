@@ -12,7 +12,6 @@ export class LoginPassword implements OnInit, OnDestroy {
    
     user: string= 'Minely';
     password: string;
-
     constructor(private _loginService:LoginService, public _router:Router) {
 
     }

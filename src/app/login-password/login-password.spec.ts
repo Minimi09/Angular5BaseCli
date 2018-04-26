@@ -15,8 +15,10 @@ import { PasivoComponent } from '../pasivo/pasivo.component';
 import { ReactivoComponent } from '../reactivo/reactivo.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Compiler } from '@angular/core';
 
-describe('LoginPassword', () => {
+
+fdescribe('LoginPassword', () => {
   let component: LoginPassword;
   let fixture: ComponentFixture<LoginPassword>;
 
@@ -34,7 +36,8 @@ describe('LoginPassword', () => {
       imports:[MATERIAL_COMPONENTS,
       FormsModule,
       RouterModule.forRoot(routes),
-      BrowserAnimationsModule],
+      BrowserAnimationsModule,
+      ],
       providers: [APP_PROVIDERS,{provide:APP_BASE_HREF, useValue: '/'}]
     })
     .compileComponents();
@@ -61,4 +64,31 @@ describe('LoginPassword', () => {
     expect(navigateSpy).toHaveBeenCalledWith(['']);
   });
 
+  it('should validate click',() =>{
+    
+    let navigateSpy = spyOn((component)._router, 'navigate');
+
+    component.user='Minely';
+    component.password='1234';
+    let compiler = fixture.nativeElement;
+    compiler.querySelector('button').click();
+
+    expect(navigateSpy).toHaveBeenCalledWith(['']);
+  });
+
+  it('should validate alert',() =>{
+    
+    component.user='Minely';
+    component.password='1234asdasd';
+
+    let navigateSpy = spyOn(window,'alert');
+  
+    let compiler = fixture.nativeElement;
+    compiler.querySelector('button').click();
+    /*var alertDialog = browser.switchTo().alert();
+    expect(alertDialog.accept).toBeDefined();
+    alertDialog.accept();
+    */
+    expect(navigateSpy).toHaveBeenCalled();
+  });
 });
