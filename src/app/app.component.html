@@ -8,6 +8,7 @@
               <span><a [routerLink]="['about']" class="toolbar-item">Nosotros</a></span>
               <span><a [routerLink]="['contact']" class="toolbar-item">Contacto</a></span>
               <span><a [routerLink]="['login']" class="toolbar-item">Ingresar</a></span>
+              <span><a [routerLink]="['add']" class="toolbar-item">Agregar</a></span>
           </div>
       </div>
   </mat-toolbar>
@@ -19,7 +20,8 @@
            <mat-list-item><a [routerLink]="['']" class="toolbar-list-item">Inicio</a></mat-list-item>
           <mat-list-item><a [routerLink]="['about']" class="toolbar-list-item">Nosotros</a></mat-list-item>
           <mat-list-item><a [routerLink]="['contact']" class="toolbar-list-item">Contacto</a></mat-list-item>
-      </mat-list>
+          <mat-list-item><a [routerLink]="['add']" class="toolbar-list-item">Agregar</a></mat-list-item>
+        </mat-list>
   </mat-sidenav>
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
   <router-outlet></router-outlet>
