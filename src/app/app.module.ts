@@ -26,8 +26,8 @@ import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginPassword } from "./login-password/login-password";
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
-import { AddComponent} from "./add-submit/add.component";
-import { Add } from "./add/add";
+import { AddComponent } from './add/add.component';
+import { AddCardComponent } from './add-card/add-card.component';
 
 
 export const MATERIAL_COMPONENTS = [
@@ -55,7 +55,8 @@ export const MATERIAL_COMPONENTS = [
     LoginComponent,
     LoginPassword,
     AddComponent,
-    Add
+    AddCardComponent,
+
   ],
   imports: [
     BrowserModule,

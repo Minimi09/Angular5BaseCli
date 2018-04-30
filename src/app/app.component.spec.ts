@@ -14,6 +14,9 @@ import { LoginPassword } from "./login-password/login-password";
 import { FormsModule } from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddComponent } from "./add/add.component";
+import { AddCardComponent} from "./add-card/add-card.component";
+
 
 
 describe('AppComponent', () => {
@@ -29,7 +32,9 @@ describe('AppComponent', () => {
         GitHubCardComponent,
         PasivoComponent,
         ReactivoComponent,
-        LoginPassword
+        LoginPassword,
+        AddCardComponent,
+        AddComponent
       ],
       imports: [
         MATERIAL_COMPONENTS,

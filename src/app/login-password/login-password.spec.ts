@@ -16,9 +16,11 @@ import { ReactivoComponent } from '../reactivo/reactivo.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Compiler } from '@angular/core';
+import { AddComponent } from "../add/add.component";
+import { AddCardComponent } from "../add-card/add-card.component";
 
 
-fdescribe('LoginPassword', () => {
+describe('LoginPassword', () => {
   let component: LoginPassword;
   let fixture: ComponentFixture<LoginPassword>;
 
@@ -32,7 +34,9 @@ fdescribe('LoginPassword', () => {
        SearchUserComponent,
        GitHubCardComponent,
       PasivoComponent,
-    ReactivoComponent],
+      ReactivoComponent,
+      AddComponent,
+      AddCardComponent],
       imports:[MATERIAL_COMPONENTS,
       FormsModule,
       RouterModule.forRoot(routes),

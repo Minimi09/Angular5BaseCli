@@ -1,0 +1,21 @@
+<mat-card class="content">
+  <mat-card-title>Agregar</mat-card-title>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="User" value="User" [(ngModel)]="user">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" type="password" value="Password" [(ngModel)]="password">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" type="password" value="ConfirmPassword" [(ngModel)]="passwordConfirm">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+       <input matInput placeholder="Email"   value="Email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name"     value="Name" [(ngModel)]="name">
+  </mat-form-field>
+   <input type="checkbox" name="Check" value="Check" [(ngModel)]="check"> Accept Terms and conditions<br>
+   <mat-card-actions> <button (click)="submitNow()" > Submit</button></mat-card-actions>
+   <div id ="response">{{response}}</div>
+</mat-card>
