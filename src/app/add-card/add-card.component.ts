@@ -17,7 +17,7 @@ export class AddCardComponent implements OnInit {
 
    patronName =/^[A-Za-z\s]*$/;
    patronEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-   patronPsdw = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$$/;
+   patronPsdw = /^[a-zA-Z0-9]+$/;
 
   constructor() { }
 
