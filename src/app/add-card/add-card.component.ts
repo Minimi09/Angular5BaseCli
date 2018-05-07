@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AddModel } from '../model/add-model';
+import { AddService } from '../services/add.service';
 
 @Component({
   selector: 'app-add-card',
@@ -13,28 +15,45 @@ export class AddCardComponent implements OnInit {
   email : string;
   name : string;
   check : boolean;
-  response : string ;
+  response : string;
+  addData : AddModel;
 
    patronName =/^[A-Za-z\s]*$/;
    patronEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
    patronPsdw = /^[a-zA-Z0-9]+$/;
 
-  constructor() { }
+  constructor(private _addService:AddService) { 
+  }
 
   ngOnInit() {
   }
 
   submitNow()
   {
-    return (
-    this.checkUser(this.user) && 
-    this.checkEmail(this.email) &&
-    this.checkPassword(this.password, this.passwordConfirm) &&
-    this.checkName(this.name) &&
-    this.check) ? this.response="OK" : this.response= "NOK";
-
+    ( 
+      this.checkUser(this.user) &&
+      this.checkEmail(this.email)&& 
+      this.checkPassword(this.password, this.passwordConfirm)&&
+      this.checkName(this.name)&&
+      this.check
+    ) ? this.postFunction() : this.response="NOK";
+  
   }
 
+  postFunction()
+  {
+    this.addData = new AddModel();
+    this.addData.user=this.user;
+    this.addData.email=this.email;
+    this.addData.password=this.password;
+    this.addData.name=this.name;
+
+    this._addService.putUserInfo(this.addData).subscribe(
+      value => {console.log(value);  this.response="OK";},
+      error => {console.log("Error");}
+    );
+  }
+  
   checkUser(user : string)  
   {
       return user.length >=5 && user.length <=15  

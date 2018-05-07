@@ -5,7 +5,7 @@ import { GitHubModel } from "../model/git-hub-model";
 
 const _userUrl = 'https://api.github.com/users';
 //const _userUrl = 'http://10.11.1.100:8080/users';
-//const _useUrl = http://localhost:7001/scheduler-web/resources/catalog/users
+//const _useUrl = 'http://localhost:7001/scheduler-web/resources/catalog/users'
 
 @Injectable()
 export class GitHubService{

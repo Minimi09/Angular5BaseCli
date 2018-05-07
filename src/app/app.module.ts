@@ -29,7 +29,6 @@ import {MatCardModule} from '@angular/material/card';
 import { AddComponent } from './add/add.component';
 import { AddCardComponent } from './add-card/add-card.component';
 
-
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
   MatSidenavModule,

@@ -1,8 +1,7 @@
 import { Component , OnInit, OnDestroy, Input} from "@angular/core";
-import { LoginService } from "../services/login.service";
 import {Router} from "@angular/router";
-
-
+import { LoginGetService } from "../services/login.get.service";
+import { LoginService } from "../services/login.service";
 @Component({
     selector: 'app-login-password',
     templateUrl: './login-password.html',
@@ -12,7 +11,8 @@ export class LoginPassword implements OnInit, OnDestroy {
    
     user: string= 'Minely';
     password: string;
-    constructor(private _loginService:LoginService, public _router:Router) {
+    valor: any;
+    constructor(private _loginService:LoginGetService, public _router:Router) {
 
     }
     ngOnInit() {
@@ -21,8 +21,14 @@ export class LoginPassword implements OnInit, OnDestroy {
     loginUser( )
     {
         //operador terciario .
-        this._loginService.checkLogin(this.user,this.password) ? this._router.navigate(['']) : alert('Error User/Password Invalidos');
-    }
+            this._loginService.checkLogin(this.user,this.password).subscribe(
+            value => {
+                    this.valor=value;
+                    console.log(this.valor);
+                    this.valor.validate ? this._router.navigate(['']) : alert('Error User/Password Invalidos'); 
+                     },
+            error => console.log('error'));   
+     }
 
     ngOnDestroy() {
     }
